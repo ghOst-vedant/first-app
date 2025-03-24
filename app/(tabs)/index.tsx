@@ -1,6 +1,13 @@
-import { View, Text, StyleSheet, ImageBackground } from "react-native"
+import {
+    View,
+    Text,
+    StyleSheet,
+    ImageBackground,
+    Pressable,
+} from "react-native"
 import React from "react"
 import icedCoffee from "@/assets/images/iced-coffee.png"
+import { Link } from "expo-router"
 const app = () => {
     return (
         <View style={styles.container}>
@@ -9,7 +16,16 @@ const app = () => {
                 resizeMode="cover"
                 style={styles.image}
             >
-                <Text style={styles.Text}>Coffee Shop</Text>
+                <Text style={styles.title}>Coffee Shop</Text>
+                <Link
+                    href={"/explore"}
+                    style={{ marginHorizontal: "auto" }}
+                    asChild
+                >
+                    <Pressable style={styles.button}>
+                        <Text style={styles.buttonText}>explore</Text>
+                    </Pressable>
+                </Link>
             </ImageBackground>
         </View>
     )
@@ -17,7 +33,6 @@ const app = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        // backgroundColor: "#fff",
         flexDirection: "column",
         paddingTop: 55,
     },
@@ -28,13 +43,37 @@ const styles = StyleSheet.create({
         resizeMode: "cover",
         justifyContent: "center",
     },
-    Text: {
+    title: {
         fontSize: 42,
         paddingVertical: 10,
         fontWeight: "bold",
         color: "white",
         textAlign: "center",
         backgroundColor: "rgba(0,0,0,0.5)",
+        marginBottom: 120,
+    },
+    Link: {
+        fontSize: 42,
+        paddingVertical: 10,
+        fontWeight: "bold",
+        color: "white",
+        textAlign: "center",
+        backgroundColor: "rgba(0,0,0,0.5)",
+        textDecorationLine: "underline",
+    },
+    button: {
+        height: 60,
+        borderRadius: 30,
+        justifyContent: "center",
+        backgroundColor: "rgba(0,0,0,0.75)",
+        paddingVertical: 6,
+        paddingHorizontal: 20,
+    },
+    buttonText: {
+        fontSize: 24,
+        fontWeight: "bold",
+        color: "white",
+        textAlign: "center",
     },
 })
 export default app
