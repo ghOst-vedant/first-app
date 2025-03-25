@@ -23,7 +23,16 @@ const app = () => {
                     asChild
                 >
                     <Pressable style={styles.button}>
-                        <Text style={styles.buttonText}>explore</Text>
+                        <Text style={styles.buttonText}>Explore</Text>
+                    </Pressable>
+                </Link>
+                <Link
+                    href={"/menu"}
+                    style={{ marginHorizontal: "auto" }}
+                    asChild
+                >
+                    <Pressable style={styles.button}>
+                        <Text style={styles.buttonText}>Our Menu</Text>
                     </Pressable>
                 </Link>
             </ImageBackground>
@@ -68,6 +77,8 @@ const styles = StyleSheet.create({
         backgroundColor: "rgba(0,0,0,0.75)",
         paddingVertical: 6,
         paddingHorizontal: 20,
+        marginBottom: 20,
+        width: 200,
     },
     buttonText: {
         fontSize: 24,

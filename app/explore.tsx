@@ -18,7 +18,7 @@ export default function Explore() {
         <View style={styles.container}>
             <Image source={coffeeShop} style={styles.image} />
             <View style={{ padding: 20 }}>
-                <ThemedText type="title">Hours</ThemedText>
+                <Text>Hours</Text>
                 <ThemedText type="default">
                     Monday - Friday: 6:00am - 8:00pm
                 </ThemedText>
@@ -57,6 +57,7 @@ const styles = StyleSheet.create({
         padding: 20,
         paddingTop: 50,
         flex: 1,
+        backgroundColor: "black",
     },
     image: {
         width: "100%",
